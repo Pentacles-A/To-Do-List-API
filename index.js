@@ -37,9 +37,9 @@ app.post('/api/todos', async (req, res) => {
   console.log('Request body:', req.body); //log the request body
   try {
     const { title, description } = req.body;
-    const Todo = new Todo({ title, description });
-    await Todo.save();
-    res.status(201).json(Todo);
+    const newTodo = new Todo({ title, description });
+    await newTodo.save();
+    res.status(201).json(newTodo);
   } catch (error) {
     console.error('Error creating todo:', error); // Log any errors
     res.status(400).json({ message: error.message });
@@ -47,17 +47,20 @@ app.post('/api/todos', async (req, res) => {
 });
 
 // Get all to-dos:
-app.get('/todos', async (req, res) => {
+app.get('/api/todos', async (req, res) => {
+  console.log('GET /api/todos endpoint hit');
   try {
     const todos = await Todo.find();
+    console.log('Found todos:', todos);
     res.json(todos);
   } catch (err) {
+    console.error('Error in GET /api/todos:', err);
     res.status(500).json({ message: err.message });
   }
 });
 
 // Get a specific to-do:
-app.get('/todos/:id', async (req, res) => {
+app.get('/api/todos/:id', async (req, res) => {
   try {
     const todo = await Todo.findById(req.params.id);
     if (!todo) return res.status(404).json({ message: 'To-do not found' });
@@ -68,7 +71,7 @@ app.get('/todos/:id', async (req, res) => {
 });
 
 // Update a to-do:
-app.put('/todos/:id', async (req, res) => {
+app.put('/api/todos/:id', async (req, res) => {
   try {
     const updatedTodo = await Todo.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
@@ -81,7 +84,7 @@ app.put('/todos/:id', async (req, res) => {
 });
 
 // Delete a to-do:
-app.delete('/todos/:id', async (req, res) => {
+app.delete('/api/todos/:id', async (req, res) => {
   try {
     const deletedTodo = await Todo.findByIdAndDelete(req.params.id);
     if (!deletedTodo) return res.status(404).json({ message: 'To-do not found' });
