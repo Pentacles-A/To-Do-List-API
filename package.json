@@ -1,5 +1,5 @@
 {
-  "name": "to-do-list-api",
+  "name": "todo-list-api",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
@@ -127,5 +127,5 @@
     "url": "https://github.com/Pentacles-A/To-Do-List-API/issues"
   },
   "homepage": "https://github.com/Pentacles-A/To-Do-List-API#readme",
-  "description": ""
+  "description": "A powerful task management API that turns chaos into order. Features JWT auth, task prioritization, smart search, and team collaboration - perfect for both production apps and learning modern API development."
 }
