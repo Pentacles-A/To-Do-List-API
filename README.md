@@ -1,5 +1,5 @@
 
-# 📝 Todo List API
+# 📝 To-do List API
 
 Tired of juggling tasks in your head? Well, stress no more!
 
@@ -163,4 +163,4 @@ GET /api/todos/stats/overview
 - Due dates must be in ISO format
 
 ---
-If you read this up to this point, consider starring the repo and feel free to share, adapt and improved upon in your own projects. 😉
+If you managed to read up to this point, I'm grateful I didn't bore you out. Kindly consider starring the repo and feel free to share, clone, adapt and improved upon in your own projects. Arigato! 😉
