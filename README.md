@@ -6,7 +6,6 @@ Tired of juggling tasks in your head? Well, stress no more!
 I raise you this powerful task management API that turns chaos into order. 
 
 Features JWT auth, task prioritization, smart search, and team collaboration— perfect for both production apps and learning modern API development.
-}
 
 ## ✨ Features
 - 🔐 User authentication & authorization
