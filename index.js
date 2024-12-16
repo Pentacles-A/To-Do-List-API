@@ -11,10 +11,6 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-//Connect to MongoDB
-// const mongoose = require('mongoose');
-// const dotenv = require('dotenv');
-
 //load environment variables
 dotenv.config();
 
